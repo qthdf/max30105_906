@@ -18,7 +18,7 @@
 #include <cstdint>
 #include <math.h>
 #include "MAX30105.h"
-#include "spo2_algorithm.h"
+#include "algorithm.h"
 
 enum LEDToRead{
 	//% block="Red" enumval=1
