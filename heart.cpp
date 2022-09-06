@@ -160,12 +160,12 @@ namespace Microbit {
 		uint8_t myspo;
 		for (byte i = 0 ; i < bufferLength ; i++)
 		  {
-		    while (particleSensor.available() == false) //do we have new data?
-		      particleSensor.check(); //Check the sensor for new data
+		    while (particleSensor->available() == false) //do we have new data?
+		      particleSensor->check(); //Check the sensor for new data
 
-		    redBuffer[i] = particleSensor.getRed();
-		    irBuffer[i] = particleSensor.getIR();
-		    particleSensor.nextSample(); //We're finished with this sample so move to next sample
+		    redBuffer[i] = particleSensor->getRed();
+		    irBuffer[i] = particleSensor->getIR();
+		    particleSensor->nextSample(); //We're finished with this sample so move to next sample
 
 		  }
 		
