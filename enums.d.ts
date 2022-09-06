@@ -30,6 +30,13 @@
     //% block="AVG" enumval=1
     AVG = 1,
     }
+    
+    declare const enum SpotwoType{
+	//% block="SPO2 Value" enumval=0
+	S1=0,
+	//% block="SPO2 AVG" enumval=1
+	S2=1,
+}
 
 
     declare const enum LEDMode {
