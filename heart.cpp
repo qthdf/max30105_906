@@ -169,30 +169,9 @@ namespace Microbit {
 
 		  }
 		maxim_heart_rate_and_oxygen_saturation(irBuffer, bufferLength, redBuffer, &spo2_value, &validSPO2, &heartRate, &validHeartRate);
-		while (1)
-		{
-			//dumping the first 25 sets of samples in the memory and shift the last 75 sets of samples to the top
-			for (int i = 25; i < 100; i++)
-			{
-			redBuffer[i - 25] = redBuffer[i];
-			irBuffer[i - 25] = irBuffer[i];
-			}
-
-			//take 25 sets of samples before calculating the heart rate.
-			for (int i = 75; i < 100; i++)
-			{
-				while (particleSensor->available() == false) //do we have new data?
-					particleSensor->check(); //Check the sensor for new data
-
-				
-				redBuffer[i] = particleSensor->getRed();
-				irBuffer[i] = particleSensor->getIR();
-				particleSensor->nextSample(); //We're finished with this sample so move to next sample
-				//After gathering 25 new samples recalculate HR and SP02
-				
-			}
-			maxim_heart_rate_and_oxygen_saturation(irBuffer, bufferLength, redBuffer, &spo2_value, &validSPO2, &heartRate, &validHeartRate);
-			switch(type)
+		
+		
+		switch(type)
 			{
 				case 0:
 					myspo = 0;
@@ -203,9 +182,6 @@ namespace Microbit {
 					break;
 
 			}
-			return myspo;
-		}
-		
-		
+		return myspo;
 	}
 }
