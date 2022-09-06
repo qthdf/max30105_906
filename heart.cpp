@@ -33,6 +33,13 @@ enum HeartbeatType{
 	AVG=1,
 };
 
+enum SpotwoType{
+	//% block="SPO2 Value" enumval=0
+	S1=0,
+	//% block="SPO2 AVG" enumval=1
+	S2=1,
+};
+
 enum LEDMode{
 	//% block="Red" enumval=2
 	RedLED=2,
@@ -56,7 +63,7 @@ namespace Microbit {
 	void begin()
 	{
 		particleSensor->beginParticle();
-		particleSensor->setup(0x1F, 4, 2, 400, 411, 4096);
+		particleSensor->setup(60, 4, 2, 400, 411, 4096);
 	}
 	
 	//%
@@ -137,5 +144,24 @@ namespace Microbit {
 				
 		}
 		return myBeat;
+	}
+	//%
+	int16_t spo(uint8_t type)
+	{
+		uint8_t myspo;
+		particleSensor->safeCheck(100);
+		
+		switch(type)
+		{
+			case 0:
+				myspo = 0;
+				break;
+				
+			case 1:
+				myspo = 1;
+				break;
+				
+		}
+		return myspo;
 	}
 }
