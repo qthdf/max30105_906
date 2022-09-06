@@ -158,7 +158,7 @@ namespace Microbit {
 	int16_t spo(uint8_t type)
 	{
 		uint8_t myspo;
-		for (byte i = 0 ; i < bufferLength ; i++)
+		for (int i = 0 ; i < 100 ; i++)
 		  {
 		    while (particleSensor->available() == false) //do we have new data?
 		      particleSensor->check(); //Check the sensor for new data
