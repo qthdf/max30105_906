@@ -189,21 +189,23 @@ namespace Microbit {
 				irBuffer[i] = particleSensor->getIR();
 				particleSensor->nextSample(); //We're finished with this sample so move to next sample
 				//After gathering 25 new samples recalculate HR and SP02
-				maxim_heart_rate_and_oxygen_saturation(irBuffer, bufferLength, redBuffer, &spo2_value, &validSPO2, &heartRate, &validHeartRate);
+				
 			}
+			maxim_heart_rate_and_oxygen_saturation(irBuffer, bufferLength, redBuffer, &spo2_value, &validSPO2, &heartRate, &validHeartRate);
+			switch(type)
+			{
+				case 0:
+					myspo = 0;
+					break;
+
+				case 1:
+					myspo = 1;
+					break;
+
+			}
+			return myspo;
 		}
 		
-		switch(type)
-		{
-			case 0:
-				myspo = 0;
-				break;
-				
-			case 1:
-				myspo = 1;
-				break;
-				
-		}
-		return myspo;
+		
 	}
 }
