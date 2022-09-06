@@ -168,7 +168,7 @@ namespace Microbit {
 	//% blockId="gatorParticle_spotwo"
 	//% block="detect heartbeat in %SpotwoType"
 	//% shim=Microbit::spotwo
-	export function spotwo(type: SpotwoType): number
+	export function spo(type: SpotwoType): number
 	{
 		return 0
 	}
