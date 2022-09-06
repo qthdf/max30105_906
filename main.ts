@@ -158,6 +158,20 @@ namespace Microbit {
 	{
 		return 0
 	}
+	
+	
+	
+	/**
+	* Grab the heartbeat from the sensor in either beats per minute, or an average of the last 4 BPM readings.
+	*/
+	//% weight=23
+	//% blockId="gatorParticle_spotwo"
+	//% block="detect heartbeat in %SpotwoType"
+	//% shim=Microbit::spotwo
+	export function spotwo(type: SpotwoType): number
+	{
+		return 0
+	}
 
 
 
