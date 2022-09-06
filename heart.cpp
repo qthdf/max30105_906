@@ -18,6 +18,7 @@
 #include <cstdint>
 #include <math.h>
 #include "MAX30105.h"
+#include "algorithm.h"
 
 enum LEDToRead{
 	//% block="Red" enumval=1
