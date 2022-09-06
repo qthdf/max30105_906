@@ -15,8 +15,8 @@
         "heart.cpp",
         "MAX30105.cpp",
         "MAX30105.h",
-        "algorithm.cpp",
-        "algorithm.h",
+        "spo2_algorithm.cpp",
+        "spo2_algorithm.h",
         "shims.d.ts",
         "enums.d.ts"
     ],
