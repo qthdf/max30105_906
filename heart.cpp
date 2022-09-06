@@ -168,6 +168,7 @@ namespace Microbit {
 		    particleSensor->nextSample(); //We're finished with this sample so move to next sample
 
 		  }
+		maxim_heart_rate_and_oxygen_saturation(irBuffer, bufferLength, redBuffer, &spo2_value, &validSPO2, &heartRate, &validHeartRate);
 		
 		
 		
