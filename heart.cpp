@@ -175,11 +175,11 @@ namespace Microbit {
 		switch(type)
 			{
 				case 0:
-					myspo = (uint8_t)spo2;;
+					myspo = (uint8_t)spo2;
 					break;
 
 				case 1:
-					myspo = (uint8_t)validSPO2;;
+					myspo = (uint8_t)validSPO2;
 					break;
 
 			}
