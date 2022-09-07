@@ -160,18 +160,18 @@ namespace Microbit {
 		uint8_t myspo;
 		bufferLength=100;
 		
+		
 		for (int i = 0 ; i < 100 ; i++)
 		  {
-		    while (particleSensor->available() == false) //do we have new data?
-		      particleSensor->check(); //Check the sensor for new data
+		  
 
-		    redBuffer[i] = particleSensor->getRed();
-		    irBuffer[i] = particleSensor->getIR();
-		    particleSensor->nextSample(); //We're finished with this sample so move to next sample
+		    redBuffer[i] = i;
+		    irBuffer[i] = i;
+		   
 
 		  }
 		
-		maxim_heart_rate_and_oxygen_saturation(&irBuffer,bufferLength, &redBuffer, &spo2_value, &validSPO2, &heartRate, &validHeartRate);
+		maxim_heart_rate_and_oxygen_saturation(irBuffer,bufferLength, &redBuffer, &spo2_value, &validSPO2, &heartRate, &validHeartRate);
 		switch(type)
 			{
 				case 0:
