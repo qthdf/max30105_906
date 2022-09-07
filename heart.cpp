@@ -168,7 +168,6 @@ namespace Microbit {
 		    particleSensor->nextSample(); //We're finished with this sample so move to next sample
 
 		  }
-		
 		switch(type)
 			{
 				case 0:
