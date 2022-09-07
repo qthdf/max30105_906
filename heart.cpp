@@ -171,7 +171,7 @@ namespace Microbit {
 
 		  }
 		
-		maxim_heart_rate_and_oxygen_saturation(irBuffer,bufferLength, redBuffer, &spo2_value, &validSPO2, &heartRate, &validHeartRate);
+		maxim_heart_rate_and_oxygen_saturation(&irBuffer,bufferLength, &redBuffer, &spo2_value, &validSPO2, &heartRate, &validHeartRate);
 		switch(type)
 			{
 				case 0:
